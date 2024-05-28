@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Order Form</title>
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Link to the responsive stylesheet -->
+    <link rel="stylesheet" href="./responsive.css">
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to the Google Font "Poppins" -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Company name header -->
+    <div>
+        <h1 class="company-name">Your Company Name</h1>
+    </div>
+    <!-- Form container with shadow and padding -->
+    <div class="form-container">
+        <!-- Form header with background color and padding -->
+        <div class="form-header">
+            <h3 id="hardware-items">IT Hardware Request Form</h3>
+        </div>
+        <!-- Container for form success message -->
+        <div class="form-div">
+            <div id="success" class="success">
+                <div class="success-msg">
+                    <img src="./assets/check-circle-svgrepo-com.svg" alt="">
+                    <h2>Your request was sent successfully!</h2>
+                    <!-- Details of the request shown upon successful submission -->
+                    <div id="request_details" class="request_details">
+                        <div class="details">
+                            <p>First Name:</p>
+                            <p id="result-first-name"></p>
+                        </div>
+                        <div class="details">
+                            <p>Last Name:</p>
+                            <p id="result-last-name"></p>
+                        </div>
+                        <div class="details">
+                            <p>Your Location:</p>
+                            <p id="result-your-location"></p>
+                        </div>
+                        <div class="details">
+                            <p>Phone Number:</p>
+                            <p id="result-phone"></p>
+                        </div>
+                        <div class="details">
+                            <p>Items you ordered:</p>
+                            <div id="result-items"></div>
+                        </div>
+                        <div class="details">
+                            <p>Additional information:</p>
+                            <div id="result-comment"></div>
+                        </div>
+                    </div>
+                    <!-- Button to reset and order again -->
+                    <button id="order-again">Order Again</button>
+                </div>
+            </div>
+            <!-- Main form for hardware request -->
+            <form id="formID" class="form">
+                <!-- Input for first name -->
+                <div class="input-form">
+                    <label for="first-name">First Name<span class="red">*</span></label>
+                    <input type="text" id="first-name" placeholder="First Name" class="input">
+                </div>
+                <!-- Input for last name -->
+                <div class="input-form">
+                    <label for="last-name">Last Name<span class="red">*</span></label>
+                    <input type="text" id="last-name" placeholder="Last Name" class="input">
+                </div>
+                <!-- Input for location -->
+                <div class="input-form">
+                    <label for="your-location">Your Location<span class="red">*</span></label>
+                    <input type="text" id="your-location" placeholder="Your Location" class="input">
+                </div>
+                <!-- Input for phone number -->
+                <div class="input-form">
+                    <label for="phone">Phone Number<span class="red">*</span></label>
+                    <input type="number" id="phone" placeholder="Phone Number" class="input">
+                </div>
+                <!-- Container for hardware list checkboxes -->
+                <div class="hardware-list-container">
+                    <p>Which hardware items do you need?<span class="red">*</span></p>
+                    <!-- Warning message for no items selected -->
+                    <p class="warning hidden" id="warning1">Please select at least one item</p>
+                    <div class="hardware-list">
+                        <!-- Checkbox for CPU -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="cpu" name="components" value="CPU">
+                            <label for="cpu">CPU</label>
+                        </div>
+                        <!-- Checkbox for GPU -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="gpu" name="components" value="GPU">
+                            <label for="gpu">GPU</label>
+                        </div>
+                        <!-- Checkbox for Motherboard -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="motherboard" name="components" value="Motherboard">
+                            <label for="motherboard">Motherboard</label>
+                        </div>
+                        <!-- Checkbox for RAM -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="ram" name="components" value="RAM">
+                            <label for="ram">RAM</label>
+                        </div>
+                        <!-- Checkbox for Storage -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="storage" name="components" value="Storage">
+                            <label for="storage">Storage</label>
+                        </div>
+                        <!-- Checkbox for PSU -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="psu" name="components" value="PSU">
+                            <label for="psu">PSU</label>
+                        </div>
+                        <!-- Checkbox for Monitor -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="monitor" name="components" value="Monitor">
+                            <label for="monitor">Monitor</label>
+                        </div>
+                        <!-- Checkbox for Keyboard -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="keyboard" name="components" value="Keyboard">
+                            <label for="keyboard">Keyboard</label>
+                        </div>
+                        <!-- Checkbox for Mouse -->
+                        <div class="hardware-item">
+                            <input type="checkbox" id="mouse" name="components" value="Mouse">
+                            <label for="mouse">Mouse</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Textarea for additional comments -->
+                <div class="input-form-textarea">
+                    <label for="comment">Additional Information</label>
+                    <textarea id="comment" name="comment" rows="4" cols="50" maxlength="150" placeholder="If you have anything additional to say..."></textarea>
+                </div>  
+                <!-- Submit button container -->
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="./script.js"></script>
+</body>
+</html>

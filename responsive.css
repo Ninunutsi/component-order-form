@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1200px) {
+    
+    .form-container{
+        width: 90%;
+        height: 610px;
+        
+    }
+    
+    .company-name{
+        font-size: 2rem;
+    }
+    
+  }
+
+@media only screen and (max-width: 600px) {
+    
+    body{
+        width: 100%;
+    }
+    
+    .form-container{
+        width: 95%;
+        height: 850px;
+    }
+    
+    .company-name{
+        font-size: 1.6rem;
+    }
+
+    .success-msg{
+        text-align: center;
+    }
+
+    .details:last-child, .details:nth-child(5){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0rem;
+    }
+
+    .form-header{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .input-form:not(:last-child){
+        width: 100%;
+    }
+
+    button{
+        width: 100%;
+    }
+    
+  }

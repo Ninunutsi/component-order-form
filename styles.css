@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --backGroundColor: #ffffff;
+    --headingColor: #669cd1;
+    --formHeaderBackground: #f0f5fa;
+    --formHeaderFontColor: #15232b;
+    --red: #E72929;
+    --green: #008c38;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--backGroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-image: url(./assets/wave-haikei.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container{
+    width: 70%;
+    height: 610px;
+    background-color: var(--backGroundColor);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.company-name{
+    color: var(--headingColor);
+}
+
+.form-header{
+    background-color: var(--formHeaderBackground);
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    color: var(--formHeaderFontColor);
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.4rem;
+}
+
+.input-form:not(:last-child){
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    width: 48%;
+}
+
+.input-form-textarea{
+    width: 100%;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form .form-div:nth-child(odd){
+    padding-right: 0.5rem;
+}
+
+.input-form .form-div:nth-child(even){
+    padding-left: 0.5rem;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color: var(--headingColor);
+    outline: none;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+button{
+    background-color: var(--headingColor);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 20%;
+}
+
+#comment {
+    width: 100%;
+    height: 90px; 
+    resize: none; 
+    margin-top: 0.5rem;
+}
+
+button:hover{
+    background-color: #557bb5;
+}
+
+.hardware-list-container{
+    width: 100%;
+}
+
+.hardware-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hardware-item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.hardware-item input{
+    margin: 0;
+    cursor: pointer;
+}
+
+.hardware-item label {
+    flex-grow: 1;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.warning{
+    color: var(--red);
+    font-size: .8rem;
+    width: 100%;
+    position: absolute;
+}
+
+.red{
+    color: var(--red);
+}
+
+.hidden{
+    display: none;
+}
+
+.border{
+    border-color: var(--red);
+}
+
+
+.request_details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0rem 3rem;
+    width: 100%;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    gap: 1rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.details p:first-child{
+    font-weight: 600;
+}
+
+.success{
+    display: none;
+}
+
+.success-msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.success-msg h2{
+    color: var(--green);
+}
+
+.success-msg img{
+    width: 70px;
+    height: 70px;
+}
+
+.visible{
+    display: block;
+}
