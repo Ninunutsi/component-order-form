@@ -20,7 +20,7 @@
     
     .form-container{
         width: 95%;
-        height: 850px;
+        min-height: 850px;
     }
     
     .company-name{
